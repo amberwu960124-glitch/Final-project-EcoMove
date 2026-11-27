@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbon Calculator | EcoMove</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Eco<span>Move</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="calculator.html" class="active">Carbon Calculator</a></li>
+      <li><a href="challenges.html">Daily Challenges</a></li>
+      <li><a href="spots.html">Eco Spots</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h2 class="section-title">Weekly Eco-Impact Calculator</h2>
+    <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">
+      Enter your weekly exercise distance and plastic-free habits to see your positive impact on SDG 3 & SDG 13.
+    </p>
+
+    <div class="card calc-box">
+      <div class="form-group">
+        <label for="runKm">🏃‍♂️ Walking / Running / Cycling Distance (km per week)</label>
+        <input type="number" id="runKm" placeholder="e.g., 15" min="0" value="10">
+      </div>
+
+      <div class="form-group">
+        <label for="cupsSaved">🥤 Reusable Cups / Bottles Used (times per week)</label>
+        <input type="number" id="cupsSaved" placeholder="e.g., 7" min="0" value="5">
+      </div>
+
+      <div class="form-group">
+        <label for="mealsSaved">🍱 Reusable Lunchboxes Used (meals per week)</label>
+        <input type="number" id="mealsSaved" placeholder="e.g., 5" min="0" value="3">
+      </div>
+
+      <button class="btn" style="width: 100%;" onclick="calculateImpact()">Calculate My Impact</button>
+
+      <div class="result-box" id="resultBox">
+        <h3 style="color: var(--primary); margin-bottom: 0.5rem;">🎉 Your Weekly Sustainability Impact:</h3>
+        <p>Total CO₂ Reduced: <span class="result-number" id="co2Output">0</span> kg</p>
+        <p>Single-Use Plastics Avoided: <span class="result-number" id="plasticOutput">0</span> items</p>
+        <p>Equivalent to planting <strong id="treeOutput">0</strong> tree seedlings!</p>
+        <p id="encouragementText" style="margin-top: 0.8rem; font-style: italic; color: var(--secondary);"></p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 EcoMove Project | Web Programming Final Project Proposal</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
